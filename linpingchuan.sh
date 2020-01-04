@@ -7,6 +7,8 @@ compile_openjdk8u(){
     sudo apt-get install -y libx11-dev libxext-dev libxrender-dev libxrandr-dev libxtst-dev libxt-dev
     sudo apt-get install ccache -y
     cd /home/lin/openjdk-jdk8u
+    # 删除无用的日志
+    rm hs_err_pid*.log
     #sudo make dist-clean
     current_directory=`pwd | grep -a 'jdk' | grep -a 'u'`
     if [ -n "$current_directory" ];then
