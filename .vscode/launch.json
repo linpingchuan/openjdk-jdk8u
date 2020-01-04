@@ -8,14 +8,14 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/java",
+            "program": "${workspaceFolder}/build/linux-x86_64-normal-server-slowdebug/jdk/bin/java",
             "args": ["-Djava.class.path=/home/lin/openjdk-jdk8u/test/java","Hello"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "preLaunchTask": "build", //预先执行task.json
+            // "preLaunchTask": "build", //预先执行task.json
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
