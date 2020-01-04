@@ -19,7 +19,7 @@ compile_openjdk8u(){
         bash configure --with-debug-level=slowdebug --disable-warnings-as-errors --enable-ccache --with-native-debug-symbols=external
     fi
 
-    sudo make CONF=linux-x86_64-normal-server-slowdebug ZIP_DEBUGINFO_FILES=0 ENABLE_FULL_DEBUG_SYMBOLS=1 LOG=debug
+    sudo make CONF=linux-x86_64-normal-server-slowdebug ZIP_DEBUGINFO_FILES=0 ENABLE_FULL_DEBUG_SYMBOLS=1 LOG=debug JOBS=2
 
     export PATH=$PATH:/home/lin/openjdk-jdk8u/build/linux-x86_64-normal-server-slowdebug/jdk/bin/
 }
