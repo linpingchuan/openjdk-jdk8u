@@ -6,10 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "bash ../linpingchuan-build.sh",
-            "problemMatcher": [
-                "$rustc"
-            ],
+            "command": "bash /home/lin/openjdk-jdk8u/compile-jdk8.sh",
             "group": {
                 "kind": "build",
                 "isDefault": true
