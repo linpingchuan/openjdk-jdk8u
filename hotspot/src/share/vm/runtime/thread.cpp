@@ -1014,7 +1014,8 @@ static Handle create_initial_thread_group(TRAPS) {
   Handle main_instance = klass->allocate_instance_handle(CHECK_NH);
   {
     JavaValue result(T_VOID);
-    Handle string = java_lang_String::create_from_str("main", CHECK_NH);
+    Handle string = java_lang_String::create_from_str("main2", CHECK_NH);
+    string = java_lang_String::create_from_str("main", CHECK_NH);
     JavaCalls::call_special(&result,
                             main_instance,
                             klass,

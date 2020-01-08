@@ -1,6 +1,8 @@
 #!/bin/bash
 # 远程调试 https://www.cnblogs.com/jhxxb/p/11094578.html
 compile_openjdk8u(){
+    cd /home/lin/openjdk-jdk8u/
+    git pull -f
     cd /home/lin/openjdk-jdk8u/build/linux-x86_64-normal-server-slowdebug/jdk/bin
     has_directory=echo $?
     if [ "has_directory" -eq "1"];then
