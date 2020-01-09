@@ -1,9 +1,16 @@
 #!/bin/bash
 # 远程调试 https://www.cnblogs.com/jhxxb/p/11094578.html
 compile_openjdk8u(){
+    is_git_f=$1
+    
+    cd /home/lin/openjdk-jdk8u/
+    if [ "$is_git_f" == "f" ];then
+	    git pull -f
+    fi
     cd /home/lin/openjdk-jdk8u/build/linux-x86_64-normal-server-slowdebug/jdk/bin
-    has_directory=echo $?
-    if [ "has_directory" -eq "1"];then
+    has_directory=$?
+
+    if [ "$has_directory" == "1" ];then
         export CXXFLAGS="-Wno-error"
         export CPPFLAGS="-Wno-error"
         export CFLAGS="-Wno-error"
@@ -30,4 +37,4 @@ compile_openjdk8u(){
 
     export PATH=$PATH:/home/lin/openjdk-jdk8u/build/linux-x86_64-normal-server-slowdebug/jdk/bin/
 }
-compile_openjdk8u
+compile_openjdk8u $*

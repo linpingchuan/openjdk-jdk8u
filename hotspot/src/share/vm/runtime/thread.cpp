@@ -998,7 +998,7 @@ static void initialize_class(Symbol* class_name, TRAPS) {
 static Handle create_initial_thread_group(TRAPS) {
   Klass* k = SystemDictionary::resolve_or_fail(vmSymbols::java_lang_ThreadGroup(), true, CHECK_NH);
   instanceKlassHandle klass (THREAD, k);
-
+  
   Handle system_instance = klass->allocate_instance_handle(CHECK_NH);
   {
     JavaValue result(T_VOID);
