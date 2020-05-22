@@ -1,5 +1,4 @@
 #!/bin/bash
-# 远程调试 https://www.cnblogs.com/jhxxb/p/11094578.html
 compile_openjdk8u(){
     is_git_f=$1
     cd /home/lin/openjdk-jdk8u/
